@@ -1,0 +1,33 @@
+fungsi _proses(delta):
+    # Jika sedang bergerak
+    jika sedang_bergerak:
+        # Hitung arah ke target
+        var arah = (posisi_tujuan - posisi).dinormalisasi()
+        # Hitung jarak ke target
+        var jarak = posisi.jarak_ke(posisi_tujuan)
+        # Hitung langkah per frame
+        var langkah = kecepatan_gerak * delta
+        # Jika sudah dekat dengan target
+        jika jarak <= langkah:
+            # Langsung ke target dan berhenti
+            posisi = posisi_tujuan
+            sedang_bergerak = salah
+        lain:
+            # Bergerak menuju target
+            posisi += arah * langkah
+
+            # Deteksi arah dominan
+            jika abs(arah.y) > 0.5 dan arah.y < 0:
+                # Serong atas
+                sprite_beranimasi.mainkan("jalan_serong_atas")
+                sprite_beranimasi.balik_h = arah.x < 0
+            atau jika abs(arah.y) > 0.5 dan arah.y > 0:
+                # Serong bawah
+                sprite_beranimasi.mainkan("jalan_serong_bawah")
+                sprite_beranimasi.balik_h = arah.x < 0
+            lain:
+                # Horizontal
+                sprite_beranimasi.mainkan("jalan")
+                sprite_beranimasi.balik_h = arah.x < 0
+    lain:
+        sprite_beranimasi.mainkan("diam")

@@ -1,0 +1,205 @@
+[gd_scene load_steps=32 format=3 uid="uid://c7s1x7ncs6fki"]
+
+[ext_resource type="Script" uid="uid://cn33wjkif4mdl" path="res://witch.gd" id="1_08n5d"]
+[ext_resource type="Texture2D" uid="uid://bp6cuqtnyefxl" path="res://asset/move_witch-Sheet.png" id="1_lf1iu"]
+[ext_resource type="Texture2D" uid="uid://bvesfiayjjbip" path="res://asset/idleWitch-sheet.png" id="2_bv18x"]
+[ext_resource type="Texture2D" uid="uid://dwgff6l7acugr" path="res://asset/downWitch-sheet.png" id="4_tv1uk"]
+[ext_resource type="Texture2D" uid="uid://dtwx3nc2716cl" path="res://asset/witch_move_serong_sheet.png" id="5_3anrn"]
+[ext_resource type="Texture2D" uid="uid://cvoswlm40xmup" path="res://asset/witch_move_up.png" id="5_10cfa"]
+[ext_resource type="Texture2D" uid="uid://cgpoi84epl2w0" path="res://asset/witch_move_down_serong-sheet.png" id="5_q5q5y"]
+[ext_resource type="Shader" uid="uid://dwpma7t2o70pt" path="res://witch.gdshader" id="8_15w4a"]
+
+[sub_resource type="Gradient" id="Gradient_15w4a"]
+offsets = PackedFloat32Array(0, 0.0714286, 0.201299, 0.357143, 0.642857, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.757282, 0.757282, 0.757282, 1, 0.504854, 0.504854, 0.504854, 1, 0.291262, 0.291262, 0.291262, 1, 0.0996423, 0.0996423, 0.0996423, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ga55x"]
+gradient = SubResource("Gradient_15w4a")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.844037, 0.146789)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10cfa"]
+atlas = ExtResource("2_bv18x")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3anrn"]
+atlas = ExtResource("2_bv18x")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5q5y"]
+atlas = ExtResource("2_bv18x")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08n5d"]
+atlas = ExtResource("1_lf1iu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv18x"]
+atlas = ExtResource("1_lf1iu")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv1uk"]
+atlas = ExtResource("1_lf1iu")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15w4a"]
+atlas = ExtResource("4_tv1uk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga55x"]
+atlas = ExtResource("4_tv1uk")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nns6f"]
+atlas = ExtResource("4_tv1uk")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbboi"]
+atlas = ExtResource("5_q5q5y")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mskq2"]
+atlas = ExtResource("5_q5q5y")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_784bq"]
+atlas = ExtResource("5_q5q5y")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guryk"]
+atlas = ExtResource("5_10cfa")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u5wv"]
+atlas = ExtResource("5_10cfa")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybqxs"]
+atlas = ExtResource("5_10cfa")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7khv"]
+atlas = ExtResource("5_3anrn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mln3"]
+atlas = ExtResource("5_3anrn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2ild"]
+atlas = ExtResource("5_3anrn")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_10cfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10cfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3anrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5q5y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08n5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv18x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv1uk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15w4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga55x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nns6f")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbboi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mskq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_784bq")
+}],
+"loop": true,
+"name": &"walk_down_serong",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guryk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u5wv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybqxs")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7khv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mln3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2ild")
+}],
+"loop": true,
+"name": &"walk_up_serong",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ga55x"]
+shader = ExtResource("8_15w4a")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_15w4a"]
+
+[node name="witch" type="Node2D"]
+script = ExtResource("1_08n5d")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-9.53674e-07, -14)
+scale = Vector2(1.46875, 1.40625)
+texture = SubResource("GradientTexture2D_ga55x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_10cfa")
+animation = &"walk_up_serong"
+frame_progress = 0.651558
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ga55x")
+position = Vector2(0, 22)
+scale = Vector2(86.875, 17.25)
+texture = SubResource("CanvasTexture_15w4a")
