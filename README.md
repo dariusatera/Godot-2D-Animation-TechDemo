@@ -9,6 +9,10 @@ Di game ini, kamu bakal mengendalikan seorang Witch yang tiba-tiba spawn di teng
 
 ---
 
+💡 **Inspirasi Proyek:** Mekanik pelacakan dan pengejaran target (*dynamic tracking*) di dalam *tech demo* ini sangat terinspirasi dari *game mobile* **Magic Survival**, dengan fokus pada bagaimana entitas musuh secara konstan dan presisi melacak posisi pemain menggunakan kalkulasi vektor.
+
+---
+
 ## 🎥 Demo Video & Gameplay
 -_-
 
@@ -51,8 +55,14 @@ Proyek ini dibangun menggunakan **Godot 4.x**. Ikuti langkah mudah berikut untuk
 2. Lakukan *Clone* atau *Download ZIP* repositori ini ke komputer kamu:
    ```bash
    git clone [https://github.com/dariusatera/Godot-2D-Animation-TechDemo.git](https://github.com/dariusatera/Godot-2D-Animation-TechDemo.git)
-3. Buka Godot Engine, pilih Import, lalu arahkan ke folder proyek ini dan pilih file project.godot.
+   
+### Menjalankan di dalam Engine
+1. Buka Godot Engine.
+2. Pada *Project Manager*, klik tombol **Import**.
+3. Cari dan pilih file `project.godot` yang ada di dalam folder hasil *clone*.
+4. Klik **Import & Edit** untuk membuka proyek.
+5. Tekan tombol **F5** untuk menjalankan *Main Scene*.
+6. Tonton pergerakan karakter dan transisi animasinya beraksi!
 
-4. Klik Edit dan tekan tombol F5 (atau klik ikon Play di pojok kanan atas) untuk langsung mencoba dan menguji gamenya!
-
-💡 Proyek ini murni dibuat untuk tujuan belajar, eksplorasi mekanik engine, dan bersenang-senang! Feel free to tweak the code and make it even cooler!
+---
+👨‍💻 **Didesain & Dikembangkan oleh:** [Firmas Ferdiansya](https://github.com/dariusatera)
